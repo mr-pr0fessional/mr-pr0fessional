@@ -1,240 +1,118 @@
-"""
-hologram.py — generates a movie-style (Iron Man HUD) 360-hologram GIF
-from a portrait image, in ONE self-contained file.
+<div align="center">
 
-Usage:
-    pip install pillow numpy
-    python hologram.py [input_image] [output.gif]
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Nikhil%20Nandan%20Manepalli&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Data%20Analyst%20%26%20GenAI%20Engineer&descAlignY=58&descSize=18" />
 
-Defaults:
-    input  : Screenshot_2026-09-28_232318.png   (next to this script)
-    output : hologram-ironman.gif
-"""
-import math
-import random
-import sys
-from pathlib import Path
+<img src="assets/hologram-ironman.gif" width="330" alt="Nikhil Nandan — Iron Man style hologram projection" />
 
-import numpy as np
-from PIL import Image, ImageDraw, ImageFilter
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Turning+data+into+decisions+%F0%9F%93%8A;Building+with+Generative+AI+%F0%9F%A4%96;Creator+of+Code+Dragons+%F0%9F%90%89;Open+to+Data+%26+GenAI+roles" alt="Typing SVG" /></a>
 
-# ----------------------------------------------------------------------------
-# Settings — tweak these freely
-# ----------------------------------------------------------------------------
-SRC = sys.argv[1] if len(sys.argv) > 1 else "Screenshot_2026-09-28_232318.png"
-OUT = sys.argv[2] if len(sys.argv) > 2 else "hologram-ironman.gif"
+<p>
+<a href="mailto:nikhilmanepalli6734@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/manepalli-nikhil-nandan/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://drive.google.com/file/d/1J2afNLWKSgSzM9D7Ko2a78Fw23dLntzc/view?usp=sharing"><img src="https://img.shields.io/badge/Resume-00C853?style=for-the-badge&logo=googledrive&logoColor=white" /></a>
+<img src="https://komarev.com/ghpvc/?username=mr-pr0fessional&style=for-the-badge&color=blueviolet" />
+</p>
 
-CROP = (170, 0, 680, 793)   # (left, top, right, bottom) region of the portrait
-CANVAS_W, CANVAS_H = 500, 600
-FIG_W = 340                 # width of the floating hologram figure
-FRAMES = 48                 # frames in the loop
-FRAME_MS = 70               # ms per frame
-BASE_Y = 556                # where the emitter disc sits
-GIF_COLORS = 80
+</div>
 
-# Iron Man HUD palette (dark -> bright)
-PALETTE = np.array([
-    [2, 8, 18],       # background-level dark
-    [0, 40, 70],      # deep blue
-    [0, 110, 160],    # mid cyan
-    [40, 200, 235],   # bright cyan
-    [190, 245, 255],  # near-white glow
-], dtype=np.float32)
+---
 
-random.seed(42)
-np.random.seed(42)
+## 👋 About Me
 
+I'm **Nikhil Nandan Manepalli**, a Computer Science & Engineering (Data Science) graduate from **Hyderabad, India** 🇮🇳, passionate about **Data Analytics, Data Engineering, and Generative AI**.
 
-# ----------------------------------------------------------------------------
-# Helpers
-# ----------------------------------------------------------------------------
-def tint_cyan(img: Image.Image) -> Image.Image:
-    """Map image luminance onto the cyan HUD palette."""
-    lum = np.asarray(img.convert("L"), dtype=np.float32) / 255.0
-    lum = lum ** 0.85  # lift midtones so the figure stays visible
-    stops = np.linspace(0.0, 1.0, len(PALETTE))
-    out = np.zeros((*lum.shape, 3), dtype=np.float32)
-    for ch in range(3):
-        out[..., ch] = np.interp(lum, stops, PALETTE[:, ch])
-    return out
+- 💼 Currently working as a **Data Analyst with GenAI** at **Nettms Urban Habitat**
+- 🎯 **Goal:** Build a career in Data Analytics & Generative AI — using data, BI tools, and AI to solve real-world business problems
+- ⚡ I ship full-stack apps and frontends fast using AI-assisted tools like **Lovable** and **Claude**
+- 🐉 **Fun fact:** I create my own **Code Dragons** series — AI-generated fantasy dragon videos that explain programming languages and technologies!
 
+---
 
-def add(base: np.ndarray, layer: np.ndarray) -> np.ndarray:
-    """Additive (screen-like) blend used for every glow element."""
-    return np.clip(base + layer, 0, 255)
+## 🎓 Certifications
 
+![Certification](https://img.shields.io/badge/Data_Analyst_with_GenAI-00BFA5?style=for-the-badge&logo=googleanalytics&logoColor=white)
+**Provider:** Nettms Urban Habitat
 
-def vertical_gradient(w: int, h: int, top_a: float, bottom_a: float,
-                      color=(60, 200, 235)) -> np.ndarray:
-    """Vertical alpha gradient rectangle, as an RGB float layer."""
-    ramp = np.linspace(top_a, bottom_a, h, dtype=np.float32)[:, None]
-    layer = np.zeros((h, w, 3), dtype=np.float32)
-    for ch in range(3):
-        layer[..., ch] = ramp * color[ch]
-    return layer
+---
 
+## 🛠️ Tech Stack
 
-# ----------------------------------------------------------------------------
-# Build the static hologram "figure" layer once
-# ----------------------------------------------------------------------------
-src = Image.open(SRC).convert("RGB").crop(CROP)
-scale = FIG_W / src.width
-fig_h = int(src.height * scale)
-figure = src.resize((FIG_W, fig_h), Image.LANCZOS)
+**📊 Data & Analytics**
 
-# Soft alpha mask: dark background of the portrait vanishes, bright figure stays.
-lum = np.asarray(figure.convert("L"), dtype=np.float32) / 255.0
-alpha = np.clip((lum - 0.13) / 0.26, 0, 1) ** 1.2
-alpha_img = Image.fromarray((alpha * 255).astype(np.uint8)).filter(
-    ImageFilter.GaussianBlur(1.5))
-alpha = np.asarray(alpha_img, dtype=np.float32)[..., None] / 255.0
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Advanced Python](https://img.shields.io/badge/Advanced_Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logo=seaborn&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-holo_base = tint_cyan(figure) * alpha
+**🤖 Generative AI & LLMs**
 
-# Bloom: blurred copy adds the movie-style glow bleed
-bloom = np.asarray(
-    Image.fromarray(np.clip(holo_base, 0, 255).astype(np.uint8)).filter(
-        ImageFilter.GaussianBlur(7)),
-    dtype=np.float32,
-) * 0.75 * alpha
-holo_base = add(holo_base, bloom)
+![ChatGPT](https://img.shields.io/badge/ChatGPT-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Gemini Veo 3](https://img.shields.io/badge/Gemini_Veo_3-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Ollama · Mistral 7B](https://img.shields.io/badge/Ollama_·_Mistral_7B-000000?style=for-the-badge&logo=ollama&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-FF6F00?style=for-the-badge&logo=openai&logoColor=white)
+![LLMs](https://img.shields.io/badge/LLMs-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Prompt Engineering](https://img.shields.io/badge/Prompt_Engineering-6D28D9?style=for-the-badge&logo=openai&logoColor=white)
+![AI Filmmaking](https://img.shields.io/badge/AI_Filmmaking-D81B60?style=for-the-badge&logo=googledeepmind&logoColor=white)
 
-# Static scanlines etched into the figure
-scan = np.ones((fig_h, 1, 1), dtype=np.float32)
-scan[::3, 0, 0] = 0.72
-holo_base *= scan
+**💻 Frontend — Vibe Coding**
 
-FIG_X = (CANVAS_W - FIG_W) // 2
-FIG_BOTTOM = BASE_Y - 6                 # figure floats just above the disc
-FIG_TOP = FIG_BOTTOM - fig_h
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-# ----------------------------------------------------------------------------
-# Particles rising from the emitter
-# ----------------------------------------------------------------------------
-N_PARTICLES = 30
-parts = []
-for _ in range(N_PARTICLES):
-    parts.append({
-        "x": random.uniform(60, CANVAS_W - 60),
-        "y": random.uniform(120, BASE_Y),
-        "r": random.uniform(0.8, 2.4),
-        "speed": random.uniform(1.2, 3.4),
-        "twinkle": random.uniform(0, 2 * math.pi),
-    })
+**🧰 AI-Assisted Dev Tools**
 
-# ----------------------------------------------------------------------------
-# Per-frame render
-# ----------------------------------------------------------------------------
-canvas_bg = np.zeros((CANVAS_H, CANVAS_W, 3), dtype=np.float32)
-# subtle dark-blue radial-ish gradient backdrop
-yy, xx = np.mgrid[0:CANVAS_H, 0:CANVAS_W].astype(np.float32)
-center_dist = np.sqrt(((xx - CANVAS_W / 2) / (CANVAS_W / 2)) ** 2 +
-                      ((yy - CANVAS_H / 2) / (CANVAS_H / 2)) ** 2)
-bg_glow = np.clip(1.0 - center_dist, 0, 1) ** 2 * 14.0
-for ch, c in enumerate((4, 16, 30)):
-    canvas_bg[..., ch] = c + bg_glow * (c / 14.0)
+![Lovable](https://img.shields.io/badge/Lovable-FF4F8B?style=for-the-badge&logo=heart&logoColor=white)
+![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)
+![Antigravity](https://img.shields.io/badge/Antigravity-4F46E5?style=for-the-badge&logo=googlechrome&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Git Bash](https://img.shields.io/badge/Git_Bash-F05032?style=for-the-badge&logo=gitbash&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-# Emitter disc (drawn once): bright core + rings
-disc_layer = np.zeros_like(canvas_bg)
-disc_img = Image.fromarray(np.zeros((CANVAS_H, CANVAS_W, 3), dtype=np.uint8))
-d = ImageDraw.Draw(disc_img)
-cx = CANVAS_W // 2
-for rx, ry, col in [
-    (140, 27, (0, 60, 90)), (110, 20, (0, 110, 160)),
-    (76, 13, (40, 200, 235)), (40, 7, (120, 230, 252)),
-]:
-    d.ellipse([cx - rx, BASE_Y - ry, cx + rx, BASE_Y + ry], fill=col)
-# bright lens-flare line across the disc
-d.line([cx - 175, BASE_Y, cx + 175, BASE_Y], fill=(90, 210, 240), width=2)
-disc_layer = np.asarray(disc_img, dtype=np.float32)
-disc_glow = np.asarray(
-    Image.fromarray(disc_layer.astype(np.uint8)).filter(ImageFilter.GaussianBlur(9)),
-    dtype=np.float32,
-) * 0.9
+---
 
-# Light cone from the emitter up to the figure (drawn once, animated per frame)
-cone_h = FIG_BOTTOM - 60
-cone = vertical_gradient(CANVAS_W, cone_h, top_a=0.10, bottom_a=0.42,
-                         color=(30, 170, 220))
-cone_mask_img = Image.new("L", (CANVAS_W, cone_h), 0)
-dm = ImageDraw.Draw(cone_mask_img)
-dm.polygon([(cx - 170, cone_h), (cx + 170, cone_h),
-            (cx + FIG_W // 2 - 20, 40), (cx - FIG_W // 2 + 20, 40)], fill=255)
-cone_mask_img = cone_mask_img.filter(ImageFilter.GaussianBlur(14))
-cone_mask = np.asarray(cone_mask_img, dtype=np.float32)[..., None] / 255.0
-cone *= cone_mask
-cone_full = np.zeros_like(canvas_bg)
-cone_top = FIG_BOTTOM - cone_h
-cone_full[cone_top:cone_top + cone_h] = cone
+## 🚀 Featured Project
 
-glitch_rows = sorted(random.sample(range(FRAMES), 7))
-frames = []
-for i in range(FRAMES):
-    t = i / FRAMES
-    frame = canvas_bg.copy()
+### 🏗️ [Vision-Bai](https://github.com/mr-pr0fessional/Vision-Bai)
 
-    # --- projector flicker -------------------------------------------------
-    flicker = 1.0 + 0.10 * math.sin(2 * math.pi * t * 6) + random.uniform(-0.06, 0.06)
-    if i in glitch_rows and random.random() < 0.5:
-        flicker *= 0.55          # projector stutter
-    if random.random() < 0.05:
-        flicker *= 1.25          # bright sparkle
+> A construction-focused **RAG chatbot** featuring **Guppy**, an AI assistant for chart analysis, report explanations, and data-driven decision-making.
 
-    # --- light cone --------------------------------------------------------
-    cone_frame = cone_full * (0.8 + 0.2 * math.sin(2 * math.pi * t * 3)) * flicker
-    frame = add(frame, cone_frame * 0.55)
+**Tech:** TypeScript · RAG · LLMs · AI-assisted frontend
 
-    # --- emitter -----------------------------------------------------------
-    pulse = 0.85 + 0.15 * math.sin(2 * math.pi * t * 4)
-    frame = add(frame, disc_glow * flicker * pulse)
-    frame = add(frame, disc_layer * flicker * pulse)
+[![Repo](https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github)](https://github.com/mr-pr0fessional/Vision-Bai)
 
-    # --- figure: bob + jitter + glitch --------------------------------------
-    bob = int(round(3.5 * math.sin(2 * math.pi * t * 2)))
-    jitter = random.randint(-2, 2) if random.random() < 0.35 else 0
-    holo = holo_base * flicker
+---
 
-    # rolling scanline band sweeping down the figure
-    band_center = (t * 1.6 % 1.0) * fig_h
-    band = np.exp(-((np.arange(fig_h) - band_center) / 26.0) ** 2)
-    holo *= (1.0 + 0.55 * band)[:, None, None]
+## 📈 GitHub Stats
 
-    # occasional horizontal slice displacement + chromatic split
-    if i in glitch_rows:
-        holo = holo.copy()
-        for _ in range(random.randint(2, 4)):
-            y0 = random.randint(0, max(1, fig_h - 40))
-            hgt = random.randint(8, 36)
-            shift = random.randint(-22, 22)
-            holo[y0:y0 + hgt] = np.roll(holo[y0:y0 + hgt], shift, axis=1)
-        holo[..., 0] = np.roll(holo[..., 0], 3, axis=1)   # red split
-        holo[..., 2] = np.roll(holo[..., 2], -3, axis=1)  # cyan split
+<div align="center">
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=mr-pr0fessional&show_icons=true&theme=tokyonight&hide_border=true" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mr-pr0fessional&layout=compact&theme=tokyonight&hide_border=true" />
+<br/>
+<img src="https://streak-stats.demolab.com?user=mr-pr0fessional&theme=tokyonight&hide_border=true" />
+</div>
 
-    # paste figure (max-blend keeps it glowing over the cone)
-    x0 = FIG_X + jitter
-    y0 = FIG_TOP + bob
-    region = frame[y0:y0 + fig_h, x0:x0 + FIG_W]
-    frame[y0:y0 + fig_h, x0:x0 + FIG_W] = np.maximum(region, holo)
+---
 
-    # --- particles ----------------------------------------------------------
-    part_img = Image.fromarray(np.zeros((CANVAS_H, CANVAS_W, 3), dtype=np.uint8))
-    dp = ImageDraw.Draw(part_img)
-    for p in parts:
-        py = (p["y"] - i * p["speed"]) % (BASE_Y - 90) + 90
-        tw = 0.5 + 0.5 * math.sin(p["twinkle"] + i * 0.55)
-        b = int(90 + 150 * tw)
-        r = p["r"]
-        dp.ellipse([p["x"] - r, py - r, p["x"] + r, py + r], fill=(int(b * 0.4), b, b))
-    frame = add(frame, np.asarray(part_img, dtype=np.float32) * flicker)
+## 🤝 Let's Connect
 
-    # --- vignette -----------------------------------------------------------
-    frame *= (1.0 - 0.35 * np.clip(center_dist - 0.55, 0, 1))[..., None]
+- 📫 **Email:** [nikhilmanepalli6734@gmail.com](mailto:nikhilmanepalli6734@gmail.com)
+- 💼 **LinkedIn:** [Manepalli Nikhil Nandan](https://www.linkedin.com/in/manepalli-nikhil-nandan/)
 
-    img = Image.fromarray(frame.astype(np.uint8))
-    frames.append(img.quantize(colors=GIF_COLORS, dither=Image.FLOYDSTEINBERG))
-
-frames[0].save(OUT, disposal=2, save_all=True, append_images=frames[1:],
-               duration=[FRAME_MS] * FRAMES, loop=0, optimize=True)
-print(f"saved {OUT} — {len(frames)} frames, {CANVAS_W}x{CANVAS_H}")
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer" />
+</div>
 
 
