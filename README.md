@@ -14,7 +14,7 @@
 
 ## 👋 About Me
 
-I'm **Nikhil Nandan**, a Data Analyst and GenAI Engineer passionate about turning data into decisions and building AI-powered products. I work across the full spectrum — from data pipelines and dashboards to LLM apps and AI filmmaking.
+I'm **Nikhil Nandan Manepalli**, a Data Analyst and GenAI Engineer passionate about turning data into decisions and building AI-powered products. I work across the full spectrum — from data pipelines and dashboards to LLM apps and AI filmmaking.
 
 - 🔭 Currently working on **Vision-Bai** — an AI-powered vision project
 - 🌱 Exploring **local LLMs with Ollama** and **agentic AI workflows**
