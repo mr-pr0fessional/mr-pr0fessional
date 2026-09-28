@@ -6,7 +6,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-manepalli--nikhil--nandan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manepalli-nikhil-nandan/)
 [![GitHub](https://img.shields.io/badge/GitHub-mr--pr0fessional-181717?style=for-the-badge&logo=github)](https://github.com/mr-pr0fessional)
-[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR-EMAIL)
+[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nikhilmanepalli6734@gmail.com)
 ![Views](https://komarev.com/ghpvc/?username=mr-pr0fessional&color=00e5ff&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>
@@ -18,7 +18,7 @@
 ```javascript
 const nikhil = {
     location: "Hyderabad, India 🇮🇳",
-    education: "B.Tech CSE (Data Science) - Graduate",
+    education: "B.Tech CSE (Data Science) @ AVN Institute of Engineering & Technology (2022-2026)",
     role: "Data Analyst | GenAI Engineer",
     currentFocus: ["VISION Bai (RAG + Guppy AI)", "Data Engineering", "LLM Applications"],
     exploring: ["Ollama + Mistral 7B", "AI Agents & Memory", "Vector Databases"],
@@ -106,32 +106,25 @@ const nikhil = {
 
 ---
 
-## 🏆 Achievements & Recognition
+## 🏆 Experience, Education & Certifications
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🥇 Competition Wins
-- 🏆 _Add your prize / hackathon / event here_
-- 🥈 _Add another one_
+### 💼 Experience
+- **Gen AI Data Analyst Intern** - *Nettms Urban Habitat*
+
+### 🎓 Education
+- **B.Tech CSE (Data Science)** - AVN Institute of Engineering and Technology *(2022 - 2026)*
 
 </td>
 <td width="50%" valign="top">
 
 ### 📜 Certifications
 - ✅ Data Analyst with GenAI - *Nettms Urban Habitat*
-- ✅ SQL for Data Analysis - *LinkedIn Learning*
-- ✅ _Add more (Power BI, Python, etc.)_
-
-</td>
-</tr>
-<tr>
-<td colspan="2">
-
-### 🎓 Experience & Community
-- 💼 **Data Science Intern** - YBI Foundation *(Mini Project: [MINI-PROJECT](https://github.com/mr-pr0fessional/MINI-PROJECT))*
-- 🌐 _Add events, communities, or clubs you're part of_
+- ✅ AI Fundamentals - *IBM*
+- ✅ TCS Young Professional - *TCS iON Digital*
 
 </td>
 </tr>
@@ -161,21 +154,14 @@ const nikhil = {
 **Tech:** ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![RAG](https://img.shields.io/badge/RAG-00E5FF?style=flat-square&logoColor=black) ![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white) ![Mistral 7B](https://img.shields.io/badge/Mistral_7B-FF7000?style=flat-square)
 
 [![Repo](https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github)](https://github.com/mr-pr0fessional/Vision-Bai)
-[![Demo](https://img.shields.io/badge/Live_Demo-00E5FF?style=for-the-badge&logoColor=black)](https://YOUR-DEMO-URL)
 
 ---
-
-## 💼 More Projects
-
-| Project | Description | Tech Stack | Links |
-|:--|:--|:--|:--|
-| 📓 **YBI Foundation Mini Project** | Data science project completed during internship | Python, Jupyter | [Repo](https://github.com/mr-pr0fessional/MINI-PROJECT) |
-| 🗄️ **SQL for Data Analysis** | Hands-on practice from the LinkedIn Learning course | SQL, Jupyter | [Repo](https://github.com/mr-pr0fessional/sql-for-data-analysis-3271025) |
 
 <div align="center">
 
 [![Vision-Bai](https://github-readme-stats.vercel.app/api/pin/?username=mr-pr0fessional&repo=Vision-Bai&theme=tokyonight&hide_border=true&bg_color=0a0f1e&title_color=00e5ff&icon_color=00e5ff)](https://github.com/mr-pr0fessional/Vision-Bai)
-[![MINI-PROJECT](https://github-readme-stats.vercel.app/api/pin/?username=mr-pr0fessional&repo=MINI-PROJECT&theme=tokyonight&hide_border=true&bg_color=0a0f1e&title_color=00e5ff&icon_color=00e5ff)](https://github.com/mr-pr0fessional/MINI-PROJECT)
+
+🚧 *More projects (dashboards, data analysis, GenAI apps) coming soon.*
 
 </div>
 
@@ -203,6 +189,7 @@ I'm open to **data analyst and GenAI roles**, freelance projects, and collaborat
 ![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:00e5ff,100:0a0f1e&height=120&section=footer)
 
 </div>
+
 
 
 
