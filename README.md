@@ -2,11 +2,7 @@
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1e,100:00e5ff&height=200&section=header&text=Nikhil%20Nandan%20Manepalli&fontSize=42&fontColor=00e5ff&animation=fadeIn&fontAlignY=35&desc=Data%20Analyst%20%7C%20GenAI%20Engineer&descAlignY=55&descSize=18)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Turning+data+into+decisions;Python+%7C+SQL+%7C+Power+BI;Building+RAG+apps+with+LLMs;CS+%28Data+Science%29+Graduate)](https://github.com/mr-pr0fessional)
-
-<div align="center" style="margin: 20px 0 10px;">
-  <img src="assets/terminal.svg" width="900" alt="Animated terminal shell" />
-</div>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Turning+data+into+decisions;Python+%7C+SQL+%7C+Power+BI;Building+RAG+apps+with+LLMs;CSE+%28Data+Science%29+Graduate)](https://git.io/typing-svg)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-manepalli--nikhil--nandan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manepalli-nikhil-nandan/)
 [![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nikhilmanepalli6734@gmail.com)
@@ -18,89 +14,32 @@
 
 ---
 
-<div align="center">
-<table width="100%" cellpadding="18" cellspacing="0" style="border:1px solid #2a3748; border-radius:14px; background:#050b14; color:#f5f7fa;">
-<tr>
-<td width="32%" valign="top" align="center" style="padding:20px; border-right:1px solid #2a3748;">
-
-<img src="https://github.com/mr-pr0fessional.png" width="260" alt="Nikhil Nandan Manepalli" style="border-radius:50%; border:4px solid #00e5ff; background:#0a0f1e;" />
-
-<h3 style="margin:18px 0 4px; font-size:28px; color:#f5f7fa;">Nikhil Nandan Manepalli</h3>
-<p style="margin:0; color:#8ea3bb; font-size:18px;">mr-pr0fessional · he/him</p>
-
-<div style="margin-top:16px; padding:10px 18px; background:#111c2b; border:1px solid #2b394b; border-radius:10px; font-weight:600; color:#e5edf7; min-width:120px;">Unfollow</div>
-
-<p style="margin-top:20px; color:#dfeaf6; font-size:16px; line-height:1.6; text-align:left;">
-Hi, I'm Nikhil Nandan Manepalli, a Computer Science & Engineering (Data Science) graduate passionate about Data Analytics, Data Engineering, and Generative AI.
-</p>
-
-<p style="margin-top:10px; color:#b7c3d6; font-size:15px; text-align:left;">
-• 1 follower • 0 following<br>
-• Hyderabad
-</p>
-
-</td>
-<td width="68%" valign="top" style="padding:20px 26px;">
-
-<div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;">
-  <div style="font-size:15px; color:#b9c7d9;">mr-pr0fessional / README.md</div>
-</div>
-
-<div style="margin:20px 0 24px; padding:18px 24px; background:linear-gradient(90deg, #0d1e2b 0%, #0c3c48 100%); border-radius:18px; min-height:110px; display:flex; align-items:center; justify-content:center;">
-  <h1 style="margin:0; color:#00e5ff; font-size:54px; line-height:1.1; text-align:center;">Nikhil Nandan Manepalli</h1>
-</div>
-
-<div style="padding:18px 0 10px; text-align:center;">
-  <h2 style="margin:0; color:#00e5ff; font-size:32px;">Data Analyst and GenAI Engineer</h2>
-</div>
-
-<div style="margin-top:20px; border-top:2px solid #3a4a5d; padding-top:16px;">
-  <h3 style="margin:0 0 10px; font-size:26px; color:#f5f7fa;">Vibe Coding</h3>
-</div>
-
-<div style="margin-top:18px; border-top:2px solid #3a4a5d; padding-top:16px;">
-  <h3 style="margin:0 0 12px; font-size:22px; color:#f5f7fa;">About Me</h3>
-  <p style="margin:0; color:#dfeaf6; font-size:18px; line-height:1.8;">
-    I'm Nikhil Nandan Manepalli, a Data Analyst & GenAI Engineer passionate about turning data into decisions and building intelligent systems with AI.
-  </p>
-  <ul style="margin:14px 0 0 20px; color:#dfeaf6; font-size:17px; line-height:1.8; padding-left:12px;">
-    <li>Working on Vision-Bai — an AI-powered vision project</li>
-    <li>Exploring LLMs, RAG pipelines, data analysis, and local AI tooling</li>
-    <li>Open to Data Analyst roles, GenAI projects, and collaborations</li>
-  </ul>
-</div>
-
-</td>
-</tr>
-</table>
-</div>
-
----
-
 ## 👋 About Me
 
 <table>
 <tr>
-<td width="62%" valign="top">
+<td width="55%" valign="top">
 
 I'm a **B.Tech CSE (Data Science)** graduate from Hyderabad 🇮🇳 who turns messy data into clear decisions, and builds AI tools that people can actually use.
 
-- 📊 **Data storyteller**: dashboards and analysis that lead to a decision
-- 🤖 **GenAI builder**: RAG pipelines, chatbots, and local LLM setups
+- 📊 **Data storyteller**: dashboards that lead to a decision
+- 🤖 **GenAI builder**: RAG pipelines, chatbots, local LLMs
 - 🎯 **Detail-oriented**: I validate outputs before I trust them
-- ⚡ **Rapid prototyper**: I prototype fast with AI tools, then make it production-ready
-- 🎬 **Creative side**: experimenting with AI filmmaking using Gemini Veo 3
+- ⚡ **Rapid prototyper**: fast with AI tools, then production-ready
+- 🎬 **Creative side**: AI filmmaking with Gemini Veo 3
 
-**🔭 Currently building:** VISION Bai (RAG + Guppy AI)
-**🌱 Exploring:** Ollama + Mistral 7B · AI agents & memory · vector databases
-**📫 Open to:** Data Analyst roles · GenAI projects · collaborations
+**🔭 Building:** VISION Bai (RAG + Guppy AI)
+**🌱 Exploring:** Ollama + Mistral 7B, AI agents & memory, vector databases
+**📫 Open to:** Data Analyst roles, GenAI projects, collaborations
 
 > *Data tells the story, AI helps write it ✨*
 
 </td>
-<td width="38%" align="center" valign="middle">
+<td width="45%" align="center" valign="middle">
 
-<img src="assets/hologram-ironman.gif" width="300" alt="Hologram animation"/>
+<img src="assets/profile.png" width="150" alt="Nikhil Nandan Manepalli"/>
+
+<img src="assets/terminal.svg" width="340" alt="Animated terminal"/>
 
 </td>
 </tr>
