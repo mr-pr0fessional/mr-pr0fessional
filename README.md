@@ -2,7 +2,11 @@
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1e,100:00e5ff&height=200&section=header&text=Nikhil%20Nandan%20Manepalli&fontSize=42&fontColor=00e5ff&animation=fadeIn&fontAlignY=35&desc=Data%20Analyst%20%7C%20GenAI%20Engineer&descAlignY=55&descSize=18)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Turning+data+into+decisions;Python+%7C+SQL+%7C+Power+BI;Building+RAG+apps+with+LLMs;CSE+%28Data+Science%29+Graduate)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Turning+data+into+decisions;Python+%7C+SQL+%7C+Power+BI;Building+RAG+apps+with+LLMs;CS+%28Data+Science%29+Graduate)](https://github.com/mr-pr0fessional)
+
+<div align="center">
+  <img src="assets/terminal.svg" width="460" alt="Animated terminal shell" />
+</div>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-manepalli--nikhil--nandan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manepalli-nikhil-nandan/)
 [![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nikhilmanepalli6734@gmail.com)
@@ -202,7 +206,3 @@ I'm open to **data analyst and GenAI roles**, freelance projects, and collaborat
 ![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:00e5ff,100:0a0f1e&height=120&section=footer)
 
 </div>
-
-
-
-
