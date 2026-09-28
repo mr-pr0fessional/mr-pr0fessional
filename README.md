@@ -1,18 +1,16 @@
 <div align="center">
 
-![Header](https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1e,100:00e5ff&height=200&section=header&text=Nikhil%20Nandan%20Manepalli&fontSize=42&fontColor=00e5ff&animation=fadeIn&fontAlignY=35&desc=Data%20Analyst%20%7C%20GenAI%20Engineer&descAlignY=55&descSize=18)
+<h1 align="center" style="font-size:52px; font-weight:800; color:#00e5ff; margin:18px 0 26px;">Building RAG apps w</h1>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Turning+data+into+decisions;Python+%7C+SQL+%7C+Power+BI;Building+RAG+apps+with+LLMs;CS+%28Data+Science%29+Graduate)](https://github.com/mr-pr0fessional)
-
-<div align="center">
-  <img src="assets/terminal.svg" width="460" alt="Animated terminal shell" />
+<div align="center" style="max-width:920px; margin:0 auto;">
+  <img src="assets/terminal.svg" width="780" alt="Animated terminal shell" />
 </div>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-manepalli--nikhil--nandan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manepalli-nikhil-nandan/)
-[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nikhilmanepalli6734@gmail.com)
-![Views](https://komarev.com/ghpvc/?username=mr-pr0fessional&color=00e5ff&style=for-the-badge&label=PROFILE+VIEWS)
-
-**[About](#-about-me) · [Flagship Project](#-flagship-project) · [Tech Stack](#-tech-stack) · [Experience](#-experience--certifications) · [Connect](#-lets-connect)**
+<div align="center" style="margin-top:18px; margin-bottom:22px;">
+  <a href="https://www.linkedin.com/in/manepalli-nikhil-nandan/"><img src="https://img.shields.io/badge/LinkedIn-MANEPALLI--NIKHIL--NANDAN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:nikhilmanepalli6734@gmail.com"><img src="https://img.shields.io/badge/Email-CONTACT_ME-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://github.com/mr-pr0fessional"><img src="https://img.shields.io/badge/Profile_Views-24-00E5FF?style=for-the-badge&logo=github&logoColor=black" alt="Profile Views" /></a>
+</div>
 
 </div>
 
