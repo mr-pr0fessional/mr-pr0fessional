@@ -2,53 +2,42 @@
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1e,100:00e5ff&height=200&section=header&text=Nikhil%20Nandan%20Manepalli&fontSize=42&fontColor=00e5ff&animation=fadeIn&fontAlignY=35&desc=Data%20Analyst%20%7C%20GenAI%20Engineer&descAlignY=55&descSize=18)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Turning+data+into+decisions;Python+%7C+SQL+%7C+Power+BI;Building+RAG+apps+with+LLMs;CSE+(Data+Science)+Graduate)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Turning+data+into+decisions;Python+%7C+SQL+%7C+Power+BI;Building+RAG+apps+with+LLMs;CSE+%28Data+Science%29+Graduate)](https://git.io/typing-svg)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-manepalli--nikhil--nandan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manepalli-nikhil-nandan/)
-[![GitHub](https://img.shields.io/badge/GitHub-mr--pr0fessional-181717?style=for-the-badge&logo=github)](https://github.com/mr-pr0fessional)
 [![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nikhilmanepalli6734@gmail.com)
 ![Views](https://komarev.com/ghpvc/?username=mr-pr0fessional&color=00e5ff&style=for-the-badge&label=PROFILE+VIEWS)
+
+**[About](#-about-me) · [Flagship Project](#-flagship-project) · [Tech Stack](#-tech-stack) · [Experience](#-experience--certifications) · [Connect](#-lets-connect)**
 
 </div>
 
 ---
 
-## 👨‍💻 About Me
-
-```javascript
-const nikhil = {
-    location: "Hyderabad, India 🇮🇳",
-    education: "B.Tech CSE (Data Science) @ AVN Institute of Engineering & Technology (2022-2026)",
-    role: "Data Analyst | GenAI Engineer",
-    currentFocus: ["VISION Bai (RAG + Guppy AI)", "Data Engineering", "LLM Applications"],
-    exploring: ["Ollama + Mistral 7B", "AI Agents & Memory", "Vector Databases"],
-    passion: ["Turning Data into Decisions", "Building with AI", "AI Filmmaking"],
-    superpower: "Analytical Thinking + Rapid Prototyping with AI",
-    motto: "Data tells the story, AI helps write it ✨",
-    funFact: "I prototype fast with AI tools, then make everything production-ready!",
-    openTo: ["Data Analyst Roles", "GenAI Projects", "Collaborations"]
-};
-```
-
----
-
-## 🚀 What Drives Me
+## 👋 About Me
 
 <table>
 <tr>
-<td width="60%" valign="top">
+<td width="62%" valign="top">
 
-- 📊 **Data Storyteller** - Turning messy data into clear dashboards and decisions
-- 🤖 **GenAI Builder** - RAG pipelines, chatbots, and local LLM setups
-- 🧩 **Problem Solver** - Breaking complex problems into simple, testable steps
-- ⚡ **Fast Learner** - Always picking up new tools, models, and frameworks
-- 🎯 **Detail-Oriented** - I validate outputs before I trust them
-- 🎬 **Creative Side** - Experimenting with AI filmmaking using Gemini Veo 3
+I'm a **B.Tech CSE (Data Science)** graduate from Hyderabad 🇮🇳 who turns messy data into clear decisions, and builds AI tools that people can actually use.
+
+- 📊 **Data storyteller**: dashboards and analysis that lead to a decision
+- 🤖 **GenAI builder**: RAG pipelines, chatbots, and local LLM setups
+- 🎯 **Detail-oriented**: I validate outputs before I trust them
+- ⚡ **Rapid prototyper**: I prototype fast with AI tools, then make it production-ready
+- 🎬 **Creative side**: experimenting with AI filmmaking using Gemini Veo 3
+
+**🔭 Currently building:** VISION Bai (RAG + Guppy AI)
+**🌱 Exploring:** Ollama + Mistral 7B · AI agents & memory · vector databases
+**📫 Open to:** Data Analyst roles · GenAI projects · collaborations
+
+> *Data tells the story, AI helps write it ✨*
 
 </td>
-<td width="40%" align="center">
+<td width="38%" align="center" valign="middle">
 
-<img src="https://raw.githubusercontent.com/mr-pr0fessional/mr-pr0fessional/main/assets/hologram-ironman.gif" width="300" alt="Hologram"/>
+<img src="assets/hologram-ironman.gif" width="300" alt="Hologram animation"/>
 
 </td>
 </tr>
@@ -56,7 +45,59 @@ const nikhil = {
 
 ---
 
-## 🛠️ Tech Stack
+## 🔮 Flagship Project
+
+### VISION Bai: Construction Business RAG Bot
+
+> Turn any spreadsheet into a dashboard, then ask questions about it in plain English.
+
+<table>
+<tr>
+<td width="33%"><img src="assets/vision-bai-upload.png" alt="VISION Bai upload screen"/><br/><sub>Drop a CSV, TSV or JSON file</sub></td>
+<td width="33%"><img src="assets/vision-bai-charts.png" alt="Automatic charts"/><br/><sub>Automatic chart suggestions</sub></td>
+<td width="33%"><img src="assets/vision-bai-guppy.png" alt="Guppy AI assistant"/><br/><sub>Guppy explains your data</sub></td>
+</tr>
+</table>
+
+```mermaid
+flowchart LR
+    A[📁 Upload CSV / TSV / JSON] --> B[⚙️ Parsed in your browser]
+    B --> C[📊 Auto charts and KPIs]
+    C --> D[🐟 Guppy AI assistant]
+    E[(📚 Construction knowledge base)] --> D
+    D --> F[💡 Data-driven decisions]
+```
+
+**What I built**
+
+- 🤖 A construction-focused **RAG chatbot** running locally on **Ollama + Mistral 7B**
+- 📚 A **construction knowledge base**, so answers are domain-specific, not generic
+- 📊 **Project data analysis**: automatic charts, KPIs, and business insights from uploaded files
+- 🐟 **Guppy**, an in-app AI assistant that explains charts and reports and supports data-driven decisions
+- 🔒 **Privacy-first**: files (up to 50,000 rows) are processed in the browser and never uploaded to a server
+
+<!-- Add a live demo link here if you have one:
+[![Live Demo](https://img.shields.io/badge/Live_Demo-00E5FF?style=for-the-badge&logo=vercel&logoColor=black)](YOUR_DEMO_URL)
+-->
+
+[![View Repo](https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github)](https://github.com/mr-pr0fessional/Vision-Bai)
+
+<div align="center">
+
+[![Vision-Bai](https://github-readme-stats.vercel.app/api/pin/?username=mr-pr0fessional&repo=Vision-Bai&theme=tokyonight&hide_border=true&bg_color=0a0f1e&title_color=00e5ff&icon_color=00e5ff)](https://github.com/mr-pr0fessional/Vision-Bai)
+
+</div>
+
+### More work
+
+| Project | What it is | Stack |
+|---|---|---|
+| [**MINI-PROJECT**](https://github.com/mr-pr0fessional/MINI-PROJECT) | Data project completed during my internship at YBI Foundation | ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white) |
+| 🚧 *Coming soon* | Dashboards, data analysis, and GenAI apps | |
+
+---
+
+## 🧰 Tech Stack
 
 <table>
 <tr><td><b>📊 Data & Analytics</b></td><td>
@@ -93,7 +134,7 @@ const nikhil = {
 ![Bun](https://img.shields.io/badge/Bun-000000?style=flat-square&logo=bun&logoColor=white)
 
 </td></tr>
-<tr><td><b>🧰 Dev Tools</b></td><td>
+<tr><td><b>🛠️ Dev Tools</b></td><td>
 
 ![Cursor](https://img.shields.io/badge/Cursor-000000?style=flat-square)
 ![Lovable](https://img.shields.io/badge/Lovable-FF4F8B?style=flat-square)
@@ -106,64 +147,33 @@ const nikhil = {
 
 ---
 
-## 🏆 Experience, Education & Certifications
+## 💼 Experience & Certifications
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 💼 Experience
-- **Gen AI Data Analyst Intern** - *Nettms Urban Habitat*
+### Experience
+**Gen AI Data Analyst Intern**
+*Nettms Urban Habitat*
 
-### 🎓 Education
-- **B.Tech CSE (Data Science)** - AVN Institute of Engineering and Technology *(2022 - 2026)*
+<!-- Add 2-3 bullets with results, e.g. "Built X that reduced Y by Z%" -->
+
+### Education
+**B.Tech CSE (Data Science)**
+*AVN Institute of Engineering & Technology* · 2022 to 2026
 
 </td>
 <td width="50%" valign="top">
 
-### 📜 Certifications
-- ✅ Data Analyst with GenAI - *Nettms Urban Habitat*
-- ✅ AI Fundamentals - *IBM*
-- ✅ TCS Young Professional - *TCS iON Digital*
+### Certifications
+- ✅ Data Analyst with GenAI, *Nettms Urban Habitat*
+- ✅ AI Fundamentals, *IBM*
+- ✅ TCS Young Professional, *TCS iON Digital*
 
 </td>
 </tr>
 </table>
-
----
-
-## 🔮 Flagship Project: VISION Bai
-
-> **Construction Business RAG Bot** - turn any spreadsheet into a dashboard, then ask questions about it in plain English.
-
-<table>
-<tr>
-<td width="33%"><img src="assets/vision-bai-upload.png" alt="VISION Bai upload screen"/><br/><sub>Drop a CSV, TSV or JSON file</sub></td>
-<td width="33%"><img src="assets/vision-bai-charts.png" alt="Automatic charts"/><br/><sub>Automatic chart suggestions</sub></td>
-<td width="33%"><img src="assets/vision-bai-guppy.png" alt="Guppy AI assistant"/><br/><sub>Guppy explains your data</sub></td>
-</tr>
-</table>
-
-**What I built**
-- 🤖 A construction-focused **RAG chatbot** running locally on **Ollama + Mistral 7B**
-- 📚 A **construction knowledge base** so answers are domain-specific, not generic
-- 📊 **Project data analysis**: automatic charts, KPIs, and business insights from uploaded files
-- 🐟 **Guppy**, an in-app AI assistant that explains charts and reports and supports data-driven decisions
-- 🔒 **Privacy-first**: files (up to 50,000 rows) are processed in the browser and never uploaded to a server
-
-**Tech:** ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![RAG](https://img.shields.io/badge/RAG-00E5FF?style=flat-square&logoColor=black) ![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white) ![Mistral 7B](https://img.shields.io/badge/Mistral_7B-FF7000?style=flat-square)
-
-[![Repo](https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github)](https://github.com/mr-pr0fessional/Vision-Bai)
-
----
-
-<div align="center">
-
-[![Vision-Bai](https://github-readme-stats.vercel.app/api/pin/?username=mr-pr0fessional&repo=Vision-Bai&theme=tokyonight&hide_border=true&bg_color=0a0f1e&title_color=00e5ff&icon_color=00e5ff)](https://github.com/mr-pr0fessional/Vision-Bai)
-
-🚧 *More projects (dashboards, data analysis, GenAI apps) coming soon.*
-
-</div>
 
 ---
 
@@ -185,6 +195,9 @@ const nikhil = {
 I'm open to **data analyst and GenAI roles**, freelance projects, and collaborations. If you're working on something with data or LLMs, let's talk!
 
 <div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manepalli-nikhil-nandan/)
+[![Email](https://img.shields.io/badge/Send_an_Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nikhilmanepalli6734@gmail.com)
 
 ![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:00e5ff,100:0a0f1e&height=120&section=footer)
 
